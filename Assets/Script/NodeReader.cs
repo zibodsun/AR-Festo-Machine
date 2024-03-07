@@ -16,6 +16,7 @@ public class NodeReader : MonoBehaviour
 
     public bool nodeChanged;
 
+    public DisplayNodeConnections connectionDisplay;
     // Subscribe to OPC UA events on start
     void Start()
     {
@@ -32,6 +33,13 @@ public class NodeReader : MonoBehaviour
 
         Debug.Log("Connected to Factory Machine " + factoryMachineID);
         Debug.Log(dataFromOPCUANode);
+        if (connectionDisplay != null)
+        {
+            connectionDisplay.AddConnection(factoryMachineID.ToString());
+        }
+        else {
+            Debug.LogWarning("No connection display assigned");
+        }
     }
 
     // Method called when the OPC UA interface is disconnected
