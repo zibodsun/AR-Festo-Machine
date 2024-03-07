@@ -10,6 +10,7 @@ public class TweenableUIElement : MonoBehaviour
 
     RectTransform rectTransform;
     bool topMenuClosed;
+    bool sideMenuClosed;
 
     private void Awake()
     {
@@ -24,6 +25,21 @@ public class TweenableUIElement : MonoBehaviour
         {
             UIElement.DOAnchorPosY(20, .6f).SetEase(Ease.InOutSine);
             topMenuClosed = true;
+        }
+        flipTransform();
+    }
+
+    public void ToggleSideMenuClosed()
+    {
+        if (sideMenuClosed)
+        {
+            UIElement.DOAnchorPosX(115, .6f).SetEase(Ease.InOutSine);
+            sideMenuClosed = false;
+        }
+        else if (!sideMenuClosed)
+        {
+            UIElement.DOAnchorPosX(-95, .6f).SetEase(Ease.InOutSine);
+            sideMenuClosed = true;
         }
         flipTransform();
     }
