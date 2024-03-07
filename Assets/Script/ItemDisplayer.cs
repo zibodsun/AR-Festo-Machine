@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 
+/*
+ *  Displays items that are active in a side panel with icons.
+ */
 public class ItemDisplayer : MonoBehaviour
 {
     public Button iconPrefab;

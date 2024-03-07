@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Stores an array of all slots for active items and allows Adding and Removing from this storage.
+ */
 public class TravellingProductIDManager : MonoBehaviour
 {
     public GameObject itemPrefab;

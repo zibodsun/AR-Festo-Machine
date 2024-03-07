@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/*
+ *  Displays a text on top of the screen which indicates which nodes have successfully connected to the interface.
+ */
 public class DisplayNodeConnections : MonoBehaviour
 {
     public TMPro.TextMeshPro textBox;
