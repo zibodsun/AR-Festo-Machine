@@ -14,6 +14,7 @@ public class NodeReader : MonoBehaviour
     public string nodeID;
     public string dataFromOPCUANode;
 
+    public bool nodeChanged;
 
     // Subscribe to OPC UA events on start
     void Start()
@@ -42,7 +43,9 @@ public class NodeReader : MonoBehaviour
     // Method called when the monitored node changes its value
     public void NodeChanged(OPCUANodeSubscription sub, object value)
     {
-        if(factoryMachineID == 2 && nodeBeingMonitored == "Emg Stop Pressed")   // Reads EMG Button for node 2
+        nodeChanged = true;
+
+        if (factoryMachineID == 2 && nodeBeingMonitored == "Emg Stop Pressed")   // Reads EMG Button for node 2
         {                                                                       // TRUE = Unpressed FALSE = Pressed
             dataFromOPCUANode = value.ToString();                               // NB: Unpressing is not enough to start machine again
             Debug.Log("Emergency Stop for Robot Arm pressed: " + value);
