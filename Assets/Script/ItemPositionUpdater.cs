@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderKeywordFilter;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /*
@@ -15,7 +15,7 @@ public class ItemPositionUpdater : MonoBehaviour
     public NodeReader nodeReader;
 
     [Header("Sensor Information")]
-    public Transform readPosition;
+    public Transform nextPosition;
 
     int productID;
 
@@ -23,11 +23,13 @@ public class ItemPositionUpdater : MonoBehaviour
     {
         productIDManager = FindObjectOfType<TravellingProductIDManager>();
         nodeReader = GetComponent<NodeReader>();
+
+        transform.LookAt(nextPosition);
     }
 
     private void Update()
     {
-        if (nodeReader.nodeChanged) { 
+        if (nodeReader.nodeChanged) {
             nodeReader.nodeChanged = false;
 
             try
@@ -37,14 +39,18 @@ public class ItemPositionUpdater : MonoBehaviour
             catch (FormatException e)
             {
                 Debug.LogError("CANNOT PARSE -" + nodeReader.dataFromOPCUANode + "- to Int32.");
+                return;
             }
 
             if (productIDManager.IsItemNew(productID))
             {
-                productIDManager.AddItem(productID, productIDManager.CreateProductReference());
+                productIDManager.AddItem(productID, transform, this);
             }
-            else { 
+            else {
                 // Update Position
+                //productIDManager.items[productID].transform.position = readPosition.position;
+                //productIDManager.items[productID].MoveTo(readPosition.position);
+                productIDManager.items[productID].currentNode = this;
             }
         }
     }

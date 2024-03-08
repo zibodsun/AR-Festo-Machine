@@ -7,13 +7,15 @@ using UnityEngine;
  */
 public class TravellingProductIDManager : MonoBehaviour
 {
-    public GameObject itemPrefab;
-    public GameObject[] items = new GameObject[13];
+    public Item itemPrefab;
+    public Item[] items = new Item[13];
 
-    public void AddItem(int id, GameObject item)
+    public void AddItem(int id, Transform t, ItemPositionUpdater node)
     {
         if (id < 1 || id > 12) { Debug.LogError("Cannot add an item out of bounds of the array size."); }
+        Item item = CreateProductReference(t);
         items[id] = item;
+        item.currentNode = node;
     }
 
     public void RemoveItem(int id)
@@ -34,8 +36,8 @@ public class TravellingProductIDManager : MonoBehaviour
     }
 
     // Provides an object when another script wants to add an item. To be called inside AddItem()
-    public GameObject CreateProductReference() {
-        return Instantiate(itemPrefab);
+    public Item CreateProductReference(Transform t) {
+        return Instantiate(itemPrefab, t.position, t.rotation);
     }
 
 }

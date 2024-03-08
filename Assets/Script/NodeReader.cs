@@ -14,6 +14,7 @@ public class NodeReader : MonoBehaviour
     public string nodeID;
     public string dataFromOPCUANode;
 
+    [ReadOnly]
     public bool nodeChanged;
 
     public DisplayNodeConnections connectionDisplay;
