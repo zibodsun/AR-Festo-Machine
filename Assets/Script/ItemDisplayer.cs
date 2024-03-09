@@ -30,6 +30,7 @@ public class ItemDisplayer : MonoBehaviour
         UpdateGridIndex();
     }
 
+    // Adds 1 to the index of the grid.
     void UpdateGridIndex() {
         gridIndex = (gridIndex + 1) % gridLocations.Count;
     }

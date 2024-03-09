@@ -15,6 +15,7 @@ public class ItemPositionUpdater : MonoBehaviour
     public NodeReader nodeReader;
 
     [Header("Sensor Information")]
+    [Tooltip("The sensor that is expected to come after this one.")]
     public Transform nextPosition;
 
     int productID;
@@ -42,12 +43,13 @@ public class ItemPositionUpdater : MonoBehaviour
                 return;
             }
 
-            if (productIDManager.IsItemNew(productID))
+            if (productIDManager.IsItemNew(productID))                  // Check if it is the first time reading the product ID
             {
+                // Spawns a new Item at the location of this node
                 productIDManager.AddItem(productID, transform, this);
             }
             else {
-                // Update Position
+                // Updates the position of the ID to be the current one
                 //productIDManager.items[productID].transform.position = readPosition.position;
                 //productIDManager.items[productID].MoveTo(readPosition.position);
                 productIDManager.items[productID].currentNode = this;

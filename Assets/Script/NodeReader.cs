@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 
 public class NodeReader : MonoBehaviour
 {
-
     [Header("Factory Machine")]
     public int factoryMachineID;
     public OPCUA_Interface oPCUAInterface;
