@@ -54,22 +54,13 @@ public class NodeReader : MonoBehaviour
     {
         nodeChanged = true;
 
-        if (nodeBeingMonitored == "Emg Stop Pressed")   // Reads EMG Button for node 2
-        {                                                                       // TRUE = Unpressed FALSE = Pressed
-            dataFromOPCUANode = value.ToString();                               // NB: Unpressing is not enough to start machine again
-        }
-
-        if (nodeBeingMonitored == "RFID In") {          // Reads the ID of the products
+        if (nodeBeingMonitored == "Emg Stop Pressed" ||
+            nodeBeingMonitored == "RFID In" ||
+            nodeBeingMonitored == "G1 Passed" ||
+            nodeBeingMonitored == "Reset" ||
+            nodeBeingMonitored == "Start")
+        {                                                                      
             dataFromOPCUANode = value.ToString();
         }
-
-        if (nodeBeingMonitored == "G1 Passed") {        // Passed the G1 Actuator
-            dataFromOPCUANode = value.ToString();
-        }
-
-        if (nodeBeingMonitored == "BG1") {              // Pressed on node 5
-            dataFromOPCUANode = value.ToString();
-        }
-
     }
 }
