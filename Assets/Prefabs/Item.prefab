@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  tSpeed: 0.4
+  tSpeed: 0.01
   currentNode: {fileID: 0}
   nextPosition: {x: 0, y: 0, z: 0}
+  lerpDuration: 0

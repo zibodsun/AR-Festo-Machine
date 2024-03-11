@@ -33,16 +33,12 @@ public class ItemPositionUpdater : MonoBehaviour
         if (nodeReader.nodeChanged) {
             nodeReader.nodeChanged = false;
 
-            try
-            {
-                productID = Int32.Parse(nodeReader.dataFromOPCUANode);
-            }
-            catch (FormatException e)
+            if ( Int32.TryParse(nodeReader.dataFromOPCUANode, out productID) == false )
             {
                 Debug.LogError("CANNOT PARSE -" + nodeReader.dataFromOPCUANode + "- to Int32.");
                 return;
             }
-
+            
             if (productIDManager.IsItemNew(productID))                  // Check if it is the first time reading the product ID
             {
                 // Spawns a new Item at the location of this node

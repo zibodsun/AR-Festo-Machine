@@ -21,8 +21,8 @@ public class NodeReader : MonoBehaviour
     // Subscribe to OPC UA events on start
     void Start()
     {
-        //oPCUAInterface.EventOnConnected.AddListener(OnInterfaceConnected);
-        //oPCUAInterface.EventOnDisconnected.AddListener(OnInterfaceDisconnected);
+        oPCUAInterface.EventOnConnected.AddListener(OnInterfaceConnected);
+        oPCUAInterface.EventOnDisconnected.AddListener(OnInterfaceDisconnected);
     }
 
     // Method called when the OPC UA interface is connected
@@ -54,10 +54,9 @@ public class NodeReader : MonoBehaviour
     {
         nodeChanged = true;
 
-        if (factoryMachineID == 2 && nodeBeingMonitored == "Emg Stop Pressed")   // Reads EMG Button for node 2
+        if (nodeBeingMonitored == "Emg Stop Pressed")   // Reads EMG Button for node 2
         {                                                                       // TRUE = Unpressed FALSE = Pressed
             dataFromOPCUANode = value.ToString();                               // NB: Unpressing is not enough to start machine again
-            Debug.Log("Emergency Stop for Robot Arm pressed: " + value);
         }
 
         if (nodeBeingMonitored == "RFID In") {          // Reads the ID of the products

@@ -12,8 +12,12 @@ public class TravellingProductIDManager : MonoBehaviour
 
     public void AddItem(int id, Transform t, ItemPositionUpdater node)
     {
-        if (id < 1 || id > 12) { Debug.LogError("Cannot add an item out of bounds of the array size."); }
+        if (id < 1 || id > 12) { 
+            Debug.LogError("Cannot add an item out of bounds of the array size. " + id);
+            return;
+        }
         Item item = CreateProductReference(t);
+        item.id = id;
         items[id] = item;
         item.currentNode = node;
     }

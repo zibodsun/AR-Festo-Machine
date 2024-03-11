@@ -19,7 +19,7 @@ public class EmgDisplayUpdater : MonoBehaviour
 
     private void Update()
     {
-        if (nodeReader.dataFromOPCUANode == "True")
+        if (nodeReader.dataFromOPCUANode == "False")
         {
             spriteRenderer.enabled = true;
         }
