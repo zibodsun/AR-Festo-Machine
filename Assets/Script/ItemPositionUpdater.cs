@@ -45,6 +45,7 @@ public class ItemPositionUpdater : MonoBehaviour
                 // Spawns a new Item at the location of this node
                 productIDManager.AddItem(productID, transform, this);
                 productIDManager.items[productID].tSpeed = speedToNextPosition;
+                StartCoroutine(productIDManager.items[productID].Lerp());
 
             }
             else {
@@ -53,6 +54,7 @@ public class ItemPositionUpdater : MonoBehaviour
                 //productIDManager.items[productID].MoveTo(readPosition.position);
                 productIDManager.items[productID].currentNode = this;
                 productIDManager.items[productID].tSpeed = speedToNextPosition;
+                StartCoroutine(productIDManager.items[productID].Lerp());
             }
         }
     }

@@ -1210,7 +1210,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 1004674576}
-  speedToNextPosition: 0.01
+  speedToNextPosition: 0.1
 --- !u!114 &212647799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,7 +1806,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 1035315302}
-  speedToNextPosition: 0
+  speedToNextPosition: 0.1
 --- !u!114 &369942226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2420,7 +2420,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 369942222}
-  speedToNextPosition: 0
+  speedToNextPosition: 0.1
 --- !u!114 &662786693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3252,7 +3252,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 1381788698}
-  speedToNextPosition: 0.04
+  speedToNextPosition: 0.1
 --- !u!114 &1004674580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3545,7 +3545,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 662786689}
-  speedToNextPosition: 0
+  speedToNextPosition: 0.1
 --- !u!114 &1035315306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5183,7 +5183,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 1527789602}
-  speedToNextPosition: 0.04
+  speedToNextPosition: 0.1
 --- !u!114 &1381788702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,7 +5408,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 1685347145}
-  speedToNextPosition: 0.04
+  speedToNextPosition: 0.1
 --- !u!114 &1527789606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5971,7 +5971,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 212647795}
-  speedToNextPosition: 0.04
+  speedToNextPosition: 0.1
 --- !u!114 &1685347149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7204,7 +7204,7 @@ MonoBehaviour:
   productIDManager: {fileID: 0}
   nodeReader: {fileID: 0}
   nextPosition: {fileID: 1004674576}
-  speedToNextPosition: 0
+  speedToNextPosition: 0.1
 --- !u!114 &2106244133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7400,7 +7400,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 9
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -7745,7 +7757,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 7
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -7818,7 +7842,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 3
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -8081,7 +8117,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 5
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -8256,7 +8304,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 1
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -8329,7 +8389,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 8
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -8397,7 +8469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5685427631114155028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,7 +8675,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 2
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -8824,7 +8908,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 6
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -8946,7 +9042,19 @@ MonoBehaviour:
   CurrentClientHandle: 1
   EventOnConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1246735196}
+        m_TargetAssemblyTypeName: DisplayNodeConnections, Assembly-CSharp
+        m_MethodName: AddConnection
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 4
+          m_BoolArgument: 0
+        m_CallState: 2
   EventOnDisconnected:
     m_PersistentCalls:
       m_Calls: []
