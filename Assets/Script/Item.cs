@@ -19,12 +19,13 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        lerpDuration = 1000 / tSpeed;    // converts the tSpeed value 
+        lerpDuration = 10000 / tSpeed;    // converts the tSpeed value 
     }
 
     private void Update()
     {
         nextPosition = currentNode.nextPosition.position;
+        //transform.position = Vector3.Lerp(transform.position, nextPosition, 0.5f * Time.deltaTime);
         StartCoroutine(Lerp());
     }
 

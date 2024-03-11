@@ -17,6 +17,7 @@ public class ItemPositionUpdater : MonoBehaviour
     [Header("Sensor Information")]
     [Tooltip("The sensor that is expected to come after this one.")]
     public Transform nextPosition;
+    public float speedToNextPosition;
 
     int productID;
 
@@ -43,12 +44,15 @@ public class ItemPositionUpdater : MonoBehaviour
             {
                 // Spawns a new Item at the location of this node
                 productIDManager.AddItem(productID, transform, this);
+                productIDManager.items[productID].tSpeed = speedToNextPosition;
+
             }
             else {
                 // Updates the position of the ID to be the current one
                 //productIDManager.items[productID].transform.position = readPosition.position;
                 //productIDManager.items[productID].MoveTo(readPosition.position);
                 productIDManager.items[productID].currentNode = this;
+                productIDManager.items[productID].tSpeed = speedToNextPosition;
             }
         }
     }

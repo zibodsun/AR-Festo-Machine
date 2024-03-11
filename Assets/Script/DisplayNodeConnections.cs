@@ -8,13 +8,19 @@ using UnityEngine;
  */
 public class DisplayNodeConnections : MonoBehaviour
 {
-    public TMPro.TextMeshPro textBox;
+    public TMP_Text textBox;
     public int totalNodesCount = 12;
 
     int countNodes;
-    public void AddConnection(string id) {
+
+    private void Start()
+    {
+        textBox = GetComponent<TMP_Text>();
+    }
+    public void AddConnection(string id) {   
         textBox.text = "Connected to NodeID " + id;
         countNodes++;
+        Debug.LogWarning(countNodes + " Nodes connected");
     }
 
     private void Update()
