@@ -21,8 +21,8 @@ public class NodeReader : MonoBehaviour
     // Subscribe to OPC UA events on start
     void Start()
     {
-        // oPCUAInterface.EventOnConnected.AddListener(OnInterfaceConnected);
-        // oPCUAInterface.EventOnDisconnected.AddListener(OnInterfaceDisconnected);
+        oPCUAInterface.EventOnConnected.AddListener(OnInterfaceConnected);
+        oPCUAInterface.EventOnDisconnected.AddListener(OnInterfaceDisconnected);
     }
 
     // Method called when the OPC UA interface is connected
