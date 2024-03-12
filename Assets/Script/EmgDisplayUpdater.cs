@@ -21,12 +21,10 @@ public class EmgDisplayUpdater : MonoBehaviour
     {
         if (nodeReader.dataFromOPCUANode == "False")
         {
-            Debug.LogWarning("Is false");
             spriteRenderer.enabled = true;
             spriteRenderer.color = Color.red;
         }
         else if (nodeReader.dataFromOPCUANode == "True") {
-            Debug.LogWarning("Is true");
             spriteRenderer.color = Color.yellow;
         }
     }

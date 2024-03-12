@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 7424837449680963948}
   - component: {fileID: 3151919601234359830}
   - component: {fileID: 3857188511587321974}
+  - component: {fileID: 4230881754528769428}
   m_Layer: 5
   m_Name: UI Item Indicator
   m_TagString: Untagged
@@ -257,3 +258,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4230881754528769428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943306283554309514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4072552149679e649bf003236946661e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
