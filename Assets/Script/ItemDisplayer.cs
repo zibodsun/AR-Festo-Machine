@@ -11,13 +11,13 @@ using Unity.VisualScripting;
  */
 public class ItemDisplayer : MonoBehaviour
 {
-    public Button iconPrefab;
+    public UIItemIndicator iconPrefab;
     public GameObject grid;
 
     [NaughtyAttributes.ReadOnly]
     public List<Transform> gridLocations;
     public CurrentOrders currentOrders;
-    public List<Button> itemIconDisplays;
+    public List<UIItemIndicator> itemIconDisplays;
     int gridIndex = 0;
 
     private void Awake()
@@ -34,9 +34,13 @@ public class ItemDisplayer : MonoBehaviour
 
     public void DisplayItemInMenu(CurrentOrderJSON[] currentOrdersObjectArray) {
         Clear();
+        UIItemIndicator newItem;
 
         foreach (CurrentOrderJSON order in currentOrdersObjectArray) {
-            itemIconDisplays.Add( Instantiate(iconPrefab, gridLocations[gridIndex].position, Quaternion.identity, this.transform) );
+            newItem = ( Instantiate(iconPrefab, gridLocations[gridIndex].position, Quaternion.identity, this.transform) );
+            newItem.text.text = order.ONo.ToString();
+            
+            itemIconDisplays.Add(newItem);
             UpdateGridIndex();
         }
     }
@@ -47,7 +51,7 @@ public class ItemDisplayer : MonoBehaviour
     }
 
     void Clear() {
-        foreach (Button order in itemIconDisplays)
+        foreach (UIItemIndicator order in itemIconDisplays)
         {
             Destroy(order.gameObject);
         }

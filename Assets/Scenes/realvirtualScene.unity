@@ -4566,6 +4566,12 @@ PrefabInstance:
       propertyPath: m_text
       value: 210 front cover black
       objectReference: {fileID: 0}
+    - target: {fileID: 4212603044774649711, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: iconPrefab
+      value: 
+      objectReference: {fileID: 4230881754528769428, guid: 7b30d5fec3666074daed1e6c6d226060,
+        type: 3}
     - target: {fileID: 5877143196373541039, guid: fe2cb80a352647a408da0322c9f786b2,
         type: 3}
       propertyPath: m_Pivot.x
