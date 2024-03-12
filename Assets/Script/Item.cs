@@ -10,15 +10,15 @@ using TMPro;
  */
 public class Item : MonoBehaviour
 {
-    public int id;
+    public int id;          // id of the pallet
     [Tooltip("Speed in which the item moves between one node to the next")]
-    public float tSpeed;    // tSpeed value with an intuitive incremental input     
+    public float tSpeed;    // speed at which this item is moving     
 
-    [NaughtyAttributes.ReadOnly] public ItemPositionUpdater currentNode;
-    [NaughtyAttributes.ReadOnly] public Vector3 nextPosition;
-    [NaughtyAttributes.ReadOnly] public float lerpDuration;
+    [NaughtyAttributes.ReadOnly] public ItemPositionUpdater currentNode;    // the node that the item has last passed
+    [NaughtyAttributes.ReadOnly] public Vector3 nextPosition;               // the position of the next node that this item is expected to travel to
+    [NaughtyAttributes.ReadOnly] public float lerpDuration;                 // duration of the lerp calculated from the tSpeed
     
-    TMP_Text IDText;
+    TMP_Text IDText;                                                        // Textbox that displays the item ID
 
     private void Awake()
     {
@@ -27,18 +27,16 @@ public class Item : MonoBehaviour
 
     private void Update()
     {
-        IDText.text = id.ToString();
-        nextPosition = currentNode.nextPosition.position;
-        //transform.position = Vector3.Lerp(transform.position, nextPosition, 0.5f * Time.deltaTime);
-        //StartCoroutine(Lerp());
+        IDText.text = id.ToString();                                        // Assign the id to the text box
+        nextPosition = currentNode.nextPosition.position;                   // Update the nextPosition to travel to
     }
 
     // Moves item to the position of the next node in linear speed.
     public IEnumerator Lerp()
     {
         float timeElapsed = 0;
-        lerpDuration = 1000 / tSpeed;    // converts the tSpeed value 
-        Debug.Log("lerp duration " + lerpDuration);
+        lerpDuration = 1000 / tSpeed;                                       // converts the tSpeed value to the duration of the lerp
+
         while (timeElapsed < lerpDuration)
         {
             transform.position = Vector3.Lerp(transform.position, nextPosition, timeElapsed / lerpDuration);
@@ -47,6 +45,6 @@ public class Item : MonoBehaviour
             yield return null;
         }
 
-        transform.position = nextPosition;
+        transform.position = nextPosition;                                  
     }
 }

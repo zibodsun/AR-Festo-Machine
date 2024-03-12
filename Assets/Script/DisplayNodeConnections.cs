@@ -8,15 +8,17 @@ using UnityEngine;
  */
 public class DisplayNodeConnections : MonoBehaviour
 {
-    public TMP_Text textBox;
-    public int totalNodesCount = 12;
+    public TMP_Text textBox;                // output of the connection display string
+    public int totalNodesCount = 12;        // number of nodes required to be connected
 
-    int countNodes;
+    int countNodes;                         // counter for the number of connected nodes
 
     private void Start()
     {
         textBox = GetComponent<TMP_Text>();
     }
+
+    // Called when a connection to one node is completed
     public void AddConnection(string id) {   
         textBox.text = "Connected to NodeID " + id;
         countNodes++;
@@ -25,6 +27,7 @@ public class DisplayNodeConnections : MonoBehaviour
 
     private void Update()
     {
+        // Checks when the max amount of nodes have connected
         if (countNodes >= totalNodesCount) {
             textBox.text = "All nodes connected.";
         }

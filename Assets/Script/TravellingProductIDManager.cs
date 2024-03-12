@@ -7,19 +7,22 @@ using UnityEngine;
  */
 public class TravellingProductIDManager : MonoBehaviour
 {
-    public Item itemPrefab;
-    public Item[] items = new Item[13];
+    public Item itemPrefab;                 // Prefab for the 3D item visualised.
+    public Item[] items = new Item[13];     // Array that stores each item on the index respective to the pallet ID
 
+    // Stores a new item
     public void AddItem(int id, Transform t, ItemPositionUpdater node)
     {
+        // Checks if ID is out of bounds for the array
         if (id < 1 || id > 12) { 
             Debug.LogError("Cannot add an item out of bounds of the array size. " + id);
             return;
         }
-        Item item = CreateProductReference(t);
-        item.id = id;
-        items[id] = item;
-        item.currentNode = node;
+
+        Item item = CreateProductReference(t);  // Instantiate an item and stores it in a variable
+        item.id = id;                           // Assign ID to new item
+        items[id] = item;                       // Adds the item to the corresponding index in the array
+        item.currentNode = node;                // Sets the current node of the item
     }
 
     public void RemoveItem(int id)
@@ -34,12 +37,13 @@ public class TravellingProductIDManager : MonoBehaviour
         }
     }
 
+    // Checks if an item ID already has an item assigned to it
     public bool IsItemNew(int id) { 
         if (items[id] == null) { return true; }
         return false;
     }
 
-    // Provides an object when another script wants to add an item. To be called inside AddItem()
+    // Creates an instance of the item prefab
     public Item CreateProductReference(Transform t) {
         return Instantiate(itemPrefab, t.position, t.rotation);
     }

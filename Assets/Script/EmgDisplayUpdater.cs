@@ -8,8 +8,8 @@ using UnityEngine;
 public class EmgDisplayUpdater : MonoBehaviour
 {
     [Header("Automatic Assignment")]
-    public SpriteRenderer spriteRenderer;
-    public NodeReader nodeReader;
+    public SpriteRenderer spriteRenderer;       // Prefab of the sprite to display
+    public NodeReader nodeReader;               // Node reader for the Emg Stop Pressed of the current node
 
     private void Awake()
     {
@@ -19,13 +19,13 @@ public class EmgDisplayUpdater : MonoBehaviour
 
     private void Update()
     {
-        if (nodeReader.dataFromOPCUANode == "False")
+        if (nodeReader.dataFromOPCUANode == "False")    // reads button pressed
         {
             spriteRenderer.enabled = true;
             spriteRenderer.color = Color.red;
         }
-        else if (nodeReader.dataFromOPCUANode == "True") {
-            spriteRenderer.color = Color.yellow;
+        else if (nodeReader.dataFromOPCUANode == "True") {  // reads button unpressed NB: This does not restart the node
+            spriteRenderer.color = Color.yellow;            // Icon becomes yellow to alert user to restart node
         }
     }
 
