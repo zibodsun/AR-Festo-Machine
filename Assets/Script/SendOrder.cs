@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using TMPro;
 
 /// <summary> 
 /// TCP Client-Server Connection Example.
@@ -31,6 +32,8 @@ public class SendOrder : MonoBehaviour
     public string qty;
 
     public string newOrderMessage;
+    public TMP_Text confirmationMessage;
+    public ItemDisplayer itemDisplayer;
     #endregion
 
     // Use this for initialization 	
@@ -121,5 +124,7 @@ public class SendOrder : MonoBehaviour
         SendMessageToServer(newOrderMessage);
         Debug.Log("New phone order sent to the factory");
         Debug.LogWarning(newOrderMessage);
+        confirmationMessage.text = "Created order for part n. " + partNumber;
+        itemDisplayer.DisplayItemInMenu();
     }
 }

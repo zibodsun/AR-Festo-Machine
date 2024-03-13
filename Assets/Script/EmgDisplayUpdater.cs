@@ -15,6 +15,7 @@ public class EmgDisplayUpdater : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         nodeReader = GetComponent<NodeReader>();
+        spriteRenderer.enabled = false;
     }
 
     private void Update()

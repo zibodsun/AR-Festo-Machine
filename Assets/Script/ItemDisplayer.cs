@@ -18,6 +18,7 @@ public class ItemDisplayer : MonoBehaviour
     [NaughtyAttributes.ReadOnly] public CurrentOrders currentOrders;             // Reference to the currentOrders script
     [NaughtyAttributes.ReadOnly] public List<UIItemIndicator> itemIconDisplays;  // List of orders currently active
     [NaughtyAttributes.ReadOnly] int gridIndex = 0;                              // Keeps track of the next empty position on the grid
+    [NaughtyAttributes.ReadOnly] CurrentOrderJSON[] currentOrdersObjectArray;
 
     private void Awake()
     {
@@ -29,8 +30,9 @@ public class ItemDisplayer : MonoBehaviour
     }
 
     // Updates the visualised items in the orders panel
-    public void DisplayItemInMenu(CurrentOrderJSON[] currentOrdersObjectArray) {
+    public void DisplayItemInMenu() {
         Clear();                           // Removes all items from the list
+        currentOrdersObjectArray = currentOrders.currentOrdersObjectArray;
         UIItemIndicator newItem;
 
         foreach (CurrentOrderJSON order in currentOrdersObjectArray) {

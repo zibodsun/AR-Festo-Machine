@@ -47,7 +47,7 @@ public class CurrentOrders : MonoBehaviour
         }
 
         // Update the UI text field
-        currentOrdersInfo.DisplayItemInMenu(currentOrdersObjectArray);
+        currentOrdersInfo.DisplayItemInMenu();
     }
 
     // Ensure JSON format compatibility
