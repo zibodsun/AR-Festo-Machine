@@ -9400,11 +9400,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 785246548346067502, guid: fe2cb80a352647a408da0322c9f786b2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5877143196373541039, guid: fe2cb80a352647a408da0322c9f786b2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9505,35 +9500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6458298644751125029, guid: fe2cb80a352647a408da0322c9f786b2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7707905455220311416, guid: fe2cb80a352647a408da0322c9f786b2,
         type: 3}
       propertyPath: m_Name
       value: FestoMachineUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8041730693151616008, guid: fe2cb80a352647a408da0322c9f786b2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8041730693151616008, guid: fe2cb80a352647a408da0322c9f786b2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8041730693151616008, guid: fe2cb80a352647a408da0322c9f786b2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479966155432932833, guid: fe2cb80a352647a408da0322c9f786b2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
