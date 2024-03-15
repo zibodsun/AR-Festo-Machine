@@ -23,14 +23,21 @@ public class Start : MonoBehaviour
 
     private void Update()
     {
+        if (emgReader.state == EmgDisplayUpdater.State.Active) {
+            return;
+        }
+        
         // detects the press of the reset button
-        if (resetReader.dataFromOPCUANode == "True") { 
+        if (resetReader.dataFromOPCUANode == "True" && !hasReset) { 
             hasReset = true;
+            emgReader.state = EmgDisplayUpdater.State.Reset;
         }
 
-        // detects the press of teh start button after the reset button has been pressed
+        // detects the press of the start button after the reset button has been pressed
         if (startReader.dataFromOPCUANode == "True" && hasReset) {
             emgReader.ResetNode();      // restart the node
+            hasReset = false;
+            emgReader.state = EmgDisplayUpdater.State.Active;
         }
     }
 }

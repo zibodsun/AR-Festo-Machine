@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 using Unity.VisualScripting;
+using System;
+using UnityEngine.Rendering.Universal;
 
 /*
  *  Displays items that are active in a side panel with icons.
@@ -38,7 +40,8 @@ public class ItemDisplayer : MonoBehaviour
         foreach (CurrentOrderJSON order in currentOrdersObjectArray) {
             newItem = ( Instantiate(iconPrefab, gridLocations[gridIndex].position, Quaternion.identity, this.transform) );  // spawns all icons
             newItem.text.text = order.ONo.ToString();   // assigns the order ID to be displayed on the virtual item
-            
+            newItem.timeLeft.text = TimeDifference(order.PlannedEnd);
+
             itemIconDisplays.Add(newItem);              // adds the instantiated item to the list
             UpdateGridIndex();                          // updates the next free grid location
         }
@@ -58,5 +61,13 @@ public class ItemDisplayer : MonoBehaviour
 
         itemIconDisplays.Clear();
         gridIndex = 0;
+    }
+
+    string TimeDifference(string e) {
+        string start = DateTime.Now.ToString().Substring(e.LastIndexOf(' ') + 1);
+        string end = e.Substring(e.LastIndexOf(' ') + 1);
+
+        TimeSpan duration = DateTime.Parse(end).Subtract(DateTime.Parse(start));
+        return duration.ToString();
     }
 }

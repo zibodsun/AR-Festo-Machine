@@ -58,7 +58,8 @@ public class NodeReader : MonoBehaviour
             nodeBeingMonitored == "RFID In" ||
             nodeBeingMonitored == "G1 Passed" ||
             nodeBeingMonitored == "Reset" ||
-            nodeBeingMonitored == "Start")
+            nodeBeingMonitored == "Start" ||
+            nodeBeingMonitored == "CoverStorage")
         {                                                                      
             dataFromOPCUANode = value.ToString();
         }

@@ -9,4 +9,5 @@ using UnityEngine;
 public class UIItemIndicator : MonoBehaviour
 {
     public TMP_Text text;
+    public TMP_Text timeLeft;
 }

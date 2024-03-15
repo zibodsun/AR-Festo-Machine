@@ -7,23 +7,31 @@ using UnityEngine;
  */
 public class EmgDisplayUpdater : MonoBehaviour
 {
+    public enum State { 
+        Active,
+        Stopped,
+        Reset
+    }
+
     [Header("Automatic Assignment")]
     public SpriteRenderer spriteRenderer;       // Prefab of the sprite to display
     public NodeReader nodeReader;               // Node reader for the Emg Stop Pressed of the current node
 
+    public State state;
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         nodeReader = GetComponent<NodeReader>();
-        spriteRenderer.enabled = false;
+        spriteRenderer.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (nodeReader.dataFromOPCUANode == "False")    // reads button pressed
         {
-            spriteRenderer.enabled = true;
+            spriteRenderer.gameObject.SetActive(true);
             spriteRenderer.color = Color.red;
+            state = State.Stopped;
         }
         else if (nodeReader.dataFromOPCUANode == "True") {  // reads button unpressed NB: This does not restart the node
             spriteRenderer.color = Color.yellow;            // Icon becomes yellow to alert user to restart node
@@ -32,6 +40,6 @@ public class EmgDisplayUpdater : MonoBehaviour
 
     // Function called when the node is reset by pressing the correct sequence on the physical panel.
     public void ResetNode() {
-        spriteRenderer.enabled = false;
+        spriteRenderer.gameObject.SetActive(false);
     }
 }

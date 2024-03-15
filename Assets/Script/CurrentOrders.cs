@@ -14,9 +14,26 @@ public class CurrentOrders : MonoBehaviour
 
     public ItemDisplayer currentOrdersInfo;
 
+    [NaughtyAttributes.ReadOnly] public float timer = 5f;
+    [NaughtyAttributes.ReadOnly] public float time;
+
     private void Awake()
     {
         currentOrdersInfo = GetComponent<ItemDisplayer>();
+        GetCurrentOrders();
+    }
+
+    // Refresh orders periodically
+    private void Update()
+    {
+        if (time <= timer)
+        {
+            time += Time.deltaTime;
+        }
+        else { 
+            GetCurrentOrders();
+            time = 0;
+        }
     }
     // Method to receive data from the server and update UI
     public void ReceieveData(string CurrentOrderStringPHPMany)

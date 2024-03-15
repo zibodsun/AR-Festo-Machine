@@ -26,7 +26,25 @@ public class StoreOrderDetails : MonoBehaviour
                 sendOrder.partNumber = "210";
                 break;
             case 1:
-                sendOrder.partNumber = "404";
+                sendOrder.partNumber = "214";
+                break;
+            case 2:
+                sendOrder.partNumber = "1200";
+                break;
+            case 3:
+                sendOrder.partNumber = "1201";
+                break;
+            case 4:
+                sendOrder.partNumber = "1210";
+                break;
+            case 5:
+                sendOrder.partNumber = "3001";
+                break;
+            case 6:
+                sendOrder.partNumber = "3002";
+                break;
+            case 7:
+                sendOrder.partNumber = "3003";
                 break;
         }
     }
