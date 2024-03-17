@@ -39,7 +39,7 @@ public class ItemDisplayer : MonoBehaviour
 
         foreach (CurrentOrderJSON order in currentOrdersObjectArray) {
             newItem = ( Instantiate(iconPrefab, gridLocations[gridIndex].position, Quaternion.identity, this.transform) );  // spawns all icons
-            newItem.text.text = order.ONo.ToString();   // assigns the order ID to be displayed on the virtual item
+            newItem.ONo.text = order.ONo.ToString();   // assigns the order ID to be displayed on the virtual item
             newItem.timeLeft.text = TimeDifference(order.PlannedEnd);
 
             itemIconDisplays.Add(newItem);              // adds the instantiated item to the list

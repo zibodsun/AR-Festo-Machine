@@ -405,5 +405,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4072552149679e649bf003236946661e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 3330812570963783271}
+  ONo: {fileID: 3330812570963783271}
   timeLeft: {fileID: 2603141222799207488}

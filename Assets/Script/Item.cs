@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
     public int id;          // id of the pallet
     [Tooltip("Speed in which the item moves between one node to the next")]
     public float tSpeed;    // speed at which this item is moving     
+    public GameObject highlight;
 
     [NaughtyAttributes.ReadOnly] public ItemPositionUpdater currentNode;    // the node that the item has last passed
     [NaughtyAttributes.ReadOnly] public Vector3 nextPosition;               // the position of the next node that this item is expected to travel to

@@ -10,6 +10,8 @@ public class TravellingProductIDManager : MonoBehaviour
     public Item itemPrefab;                 // Prefab for the 3D item visualised.
     public Item[] items = new Item[13];     // Array that stores each item on the index respective to the pallet ID
 
+    int highlighted;
+
     // Stores a new item
     public void AddItem(int id, Transform t, ItemPositionUpdater node)
     {
@@ -48,4 +50,14 @@ public class TravellingProductIDManager : MonoBehaviour
         return Instantiate(itemPrefab, t.position, t.rotation);
     }
 
+    // Enables the child object of an item which shows a transparent highlight
+    public void Highlight(int carrierId) {
+        if (highlighted != 0)
+        {
+            items[highlighted].highlight.SetActive(false);
+        }
+
+        items[carrierId].highlight.SetActive(true);
+        highlighted = carrierId;
+    }
 }
