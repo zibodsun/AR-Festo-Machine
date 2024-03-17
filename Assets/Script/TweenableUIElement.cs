@@ -14,6 +14,7 @@ public class TweenableUIElement : MonoBehaviour
     RectTransform rectTransform;        // The transform of the object this script is attached to
     bool topMenuClosed;                 // Whether the top menu has been closed
     bool sideMenuClosed;                // Whether the side menu has been closed
+    bool extraMenuClosed = true;
 
     private void Awake()
     {
@@ -48,6 +49,21 @@ public class TweenableUIElement : MonoBehaviour
             sideMenuClosed = true;
         }
         flipTransform();    // flip the arrow icon
+    }
+
+    // Tweens the extra menu on the X axis
+    public void ToggleExtraMenuClosed()
+    {
+        if (extraMenuClosed)
+        {
+            UIElement.DOAnchorPosX(-430, .6f).SetEase(Ease.InOutSine);
+            extraMenuClosed = false;
+        }
+        else if (!extraMenuClosed)
+        {
+            UIElement.DOAnchorPosX(-490, .6f).SetEase(Ease.InOutSine);
+            extraMenuClosed = true;
+        }
     }
 
     // Flip a transform on the x axis
