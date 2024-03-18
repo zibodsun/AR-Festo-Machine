@@ -42,11 +42,11 @@ public class Item : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, nextPosition, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
-            if(id == 10) Debug.Log("10 in while");
+            // if(id == 10) Debug.Log("10 in while");
             yield return null;
         }
 
         transform.position = nextPosition;
-        if (id == 10) Debug.Log("10 Coroutine finished");
+        // if (id == 10) Debug.Log("10 Coroutine finished");
     }
 }

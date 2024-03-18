@@ -100,7 +100,7 @@ public class Cart : MonoBehaviour
                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
                     // Process received data
                     ReceieveData(webRequest.downloadHandler.text);
-                    Debug.LogError("Current Orders Success");
+                    //Debug.LogError("Current Orders Success");
                     break;
             }
         }

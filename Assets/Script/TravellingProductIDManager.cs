@@ -11,7 +11,7 @@ public class TravellingProductIDManager : MonoBehaviour
     public Item[] items = new Item[13];     // Array that stores each item on the index respective to the pallet ID
 
     int highlighted;
-
+    Vector3 stretch = new Vector3 (0, 1f, 0);
     // Stores a new item
     public void AddItem(int id, Transform t, ItemPositionUpdater node)
     {
@@ -52,14 +52,18 @@ public class TravellingProductIDManager : MonoBehaviour
 
     // Enables the child object of an item which shows a transparent highlight
     public void Highlight(int carrierId) {
+        Debug.Log("Trying to highligh " + carrierId);
         if (highlighted != 0)
         {
             Debug.Log("Disable " + highlighted);
             items[highlighted].highlight.SetActive(false);
+            items[carrierId].transform.localScale -= stretch;
         }
 
-        items[carrierId].highlight.SetActive(true);
         highlighted = carrierId;
+        items[highlighted].highlight.SetActive(true);
+        items[highlighted].transform.localScale += stretch;
+
         Debug.Log("Enable " + highlighted);
     }
 }

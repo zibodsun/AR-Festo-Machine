@@ -30,16 +30,14 @@ public class UIItemIndicator : MonoBehaviour
     void HighlightItem() {
 
         cart.GetCart();
-        Debug.Log("Item Script -> " + carrierID);
+
         // Find carrier ID from order number
         if(carrierID == null)
         {
-            Debug.Log("Carrier is null");
             foreach (CartJSON item in cart.cartObjectArray)
             {
                 if (item.ONo == ONo.text)
                 {
-                    Debug.Log("ASsigned carreir");
                     carrierID = item.CarrierID;
                 }
             }

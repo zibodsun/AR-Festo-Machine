@@ -68,6 +68,10 @@ public class ItemDisplayer : MonoBehaviour
         string end = e.Substring(e.LastIndexOf(' ') + 1);
 
         TimeSpan duration = DateTime.Parse(end).Subtract(DateTime.Parse(start));
+
+        if (duration < TimeSpan.Zero) {
+            return "Finished?";
+        }
         return duration.ToString();
     }
 }

@@ -407,3 +407,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ONo: {fileID: 3330812570963783271}
   timeLeft: {fileID: 2603141222799207488}
+  productManager: {fileID: 0}
+  cart: {fileID: 0}
