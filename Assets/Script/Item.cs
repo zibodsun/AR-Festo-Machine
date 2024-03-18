@@ -36,16 +36,17 @@ public class Item : MonoBehaviour
     public IEnumerator Lerp()
     {
         float timeElapsed = 0;
-        lerpDuration = 1000 / tSpeed;                                       // converts the tSpeed value to the duration of the lerp
+        lerpDuration = 10 - tSpeed;                                       // converts the tSpeed value to the duration of the lerp
 
         while (timeElapsed < lerpDuration)
         {
             transform.position = Vector3.Lerp(transform.position, nextPosition, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
-
+            if(id == 10) Debug.Log("10 in while");
             yield return null;
         }
 
-        transform.position = nextPosition;                                  
+        transform.position = nextPosition;
+        if (id == 10) Debug.Log("10 Coroutine finished");
     }
 }

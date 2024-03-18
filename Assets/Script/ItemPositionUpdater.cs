@@ -46,6 +46,7 @@ public class ItemPositionUpdater : MonoBehaviour
                 productIDManager.AddItem(productID, transform, this);
                 productIDManager.items[productID].tSpeed = speedToNextPosition;
                 StartCoroutine(productIDManager.items[productID].Lerp());
+                if(productID == 10) Debug.Log(productID + " coroutine (new)");
 
             }
             else {
@@ -53,6 +54,7 @@ public class ItemPositionUpdater : MonoBehaviour
                 productIDManager.items[productID].currentNode = this;
                 productIDManager.items[productID].tSpeed = speedToNextPosition;
                 StartCoroutine(productIDManager.items[productID].Lerp());
+                if (productID == 10) Debug.Log(productID + " coroutine");
             }
         }
     }

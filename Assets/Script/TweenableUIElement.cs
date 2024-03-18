@@ -56,12 +56,12 @@ public class TweenableUIElement : MonoBehaviour
     {
         if (extraMenuClosed)
         {
-            UIElement.DOAnchorPosX(-480, .6f).SetEase(Ease.InOutSine);
+            UIElement.DOAnchorPosX(90, .6f).SetEase(Ease.InOutSine);
             extraMenuClosed = false;
         }
         else if (!extraMenuClosed)
         {
-            UIElement.DOAnchorPosX(-550, .6f).SetEase(Ease.InOutSine);
+            UIElement.DOAnchorPosX(35, .6f).SetEase(Ease.InOutSine);
             extraMenuClosed = true;
         }
     }
