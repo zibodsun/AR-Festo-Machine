@@ -2849,6 +2849,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sendOrder: {fileID: 2182025694395014338}
   dropdown: {fileID: 0}
+  image: {fileID: 8197540905567371682}
+  icons:
+  - {fileID: 21300000, guid: 4a208192e6d56bf438f4739706e6f4f4, type: 3}
+  - {fileID: 21300000, guid: 284b723381683a04e948d5198c67f7b2, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &5405925129676411066
 GameObject:
   m_ObjectHideFlags: 0
