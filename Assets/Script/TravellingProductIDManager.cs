@@ -54,10 +54,12 @@ public class TravellingProductIDManager : MonoBehaviour
     public void Highlight(int carrierId) {
         if (highlighted != 0)
         {
+            Debug.Log("Disable " + highlighted);
             items[highlighted].highlight.SetActive(false);
         }
 
         items[carrierId].highlight.SetActive(true);
         highlighted = carrierId;
+        Debug.Log("Enable " + highlighted);
     }
 }

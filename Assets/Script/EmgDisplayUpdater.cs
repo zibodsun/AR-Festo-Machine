@@ -1,3 +1,4 @@
+using Pixelplacement;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,8 @@ public class EmgDisplayUpdater : MonoBehaviour
     public State state;
     private void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        spriteRenderer = transform.Find("SpriteRenderer").GetComponent<SpriteRenderer>();
         nodeReader = GetComponent<NodeReader>();
-        spriteRenderer.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -30,6 +30,7 @@ public class EmgDisplayUpdater : MonoBehaviour
         if (nodeReader.dataFromOPCUANode == "False")    // reads button pressed
         {
             spriteRenderer.gameObject.SetActive(true);
+            spriteRenderer.enabled = true;
             spriteRenderer.color = Color.red;
             state = State.Stopped;
         }
@@ -41,5 +42,6 @@ public class EmgDisplayUpdater : MonoBehaviour
     // Function called when the node is reset by pressing the correct sequence on the physical panel.
     public void ResetNode() {
         spriteRenderer.gameObject.SetActive(false);
+        spriteRenderer.enabled = false;
     }
 }

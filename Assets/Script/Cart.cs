@@ -14,25 +14,25 @@ public class Cart : MonoBehaviour
 
     //public ItemDisplayer currentOrdersInfo;
 
-    //[NaughtyAttributes.ReadOnly] public float timer = 5f;
-    //[NaughtyAttributes.ReadOnly] public float time;
+    [NaughtyAttributes.ReadOnly] public float timer = 5f;
+    [NaughtyAttributes.ReadOnly] public float time;
 
     private void Awake()
     {
         //currentOrdersInfo = GetComponent<ItemDisplayer>();
-        //GetCurrentOrders();
+        GetCart();
     }
 
     private void Update()
     {
-        /* if (time <= timer)
+        if (time <= timer)
         {
             time += Time.deltaTime;
         }
         else { 
-            GetCurrentOrders();
+            GetCart();
             time = 0;
-        } */
+        }
     }
 
     // Method to receive data from the server and update UI
