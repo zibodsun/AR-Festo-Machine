@@ -11,6 +11,7 @@ public class TwinButton : MonoBehaviour
     [Space]
     public Camera ARCamera;
     public Camera twinCamera;
+    public GameObject infoPanels;
 
     private void Awake()
     {
@@ -24,11 +25,13 @@ public class TwinButton : MonoBehaviour
             text.text = "AR";
             ARCamera.gameObject.SetActive(false);
             twinCamera.gameObject.SetActive(true);
+            infoPanels.SetActive(false);
         }
         else if (twinCamera.gameObject.activeSelf) {
             text.text = "T";
             ARCamera.gameObject.SetActive(true);
             twinCamera.gameObject.SetActive(false);
+            infoPanels.SetActive(true);
         }
     }
 }
