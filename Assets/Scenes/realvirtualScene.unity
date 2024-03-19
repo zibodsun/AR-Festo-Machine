@@ -1614,6 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 2014400487}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: -1, y: 0, z: 0}
 --- !u!114 &98226199
@@ -10683,6 +10684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 1515094650}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 0, y: 0, z: 1}
 --- !u!1 &817869580
@@ -12084,6 +12086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 301812900}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 1.2, y: 0, z: 0}
 --- !u!114 &949679495
@@ -13156,6 +13159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 133538322}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: -1, y: 0, z: 0}
 --- !u!114 &1005638181
@@ -14983,7 +14987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af19d4b80f4fc4950b99eb9ea78ab6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -16261,6 +16265,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 597627406}
+    - target: {fileID: 1443787574787429082, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -20946,6 +20955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 753881105}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 0, y: 0, z: 1}
 --- !u!114 &1568079484
@@ -23218,6 +23228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 561515045}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 0, y: 0, z: -1}
 --- !u!114 &1873161162
@@ -24015,6 +24026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 355895282}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 3, y: 0.6, z: 4}
 --- !u!114 &1926864674
@@ -25492,6 +25504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 1047641877}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 1.2, y: 0, z: 0}
 --- !u!114 &2033483038
@@ -25759,6 +25772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   lookPosition: {fileID: 1826379479}
+  staticPosition: {x: 0, y: 0, z: 0}
   twinViewCamera: {fileID: 1529032953}
   offset: {x: 0, y: 0, z: 1}
 --- !u!114 &2045150189

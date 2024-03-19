@@ -19,6 +19,12 @@ public class ItemPositionUpdater : MonoBehaviour
     [Tooltip("The speed that the item will have when it travels to the next node.")] public float speedToNextPosition;
 
     int productID;          // stores the value of the last read product ID
+    Vector3 originalTransformPosition;
+
+    private void Awake()
+    {
+        originalTransformPosition = transform.position;    
+    }
 
     private void Start()
     {
@@ -46,7 +52,7 @@ public class ItemPositionUpdater : MonoBehaviour
                 productIDManager.AddItem(productID, transform, this);
                 productIDManager.items[productID].tSpeed = speedToNextPosition;
                 StartCoroutine(productIDManager.items[productID].Lerp());
-                if(productID == 10) Debug.Log(productID + " coroutine (new)");
+
 
             }
             else {
@@ -54,9 +60,8 @@ public class ItemPositionUpdater : MonoBehaviour
                 productIDManager.items[productID].currentNode = this;
                 productIDManager.items[productID].tSpeed = speedToNextPosition;
                 StartCoroutine(productIDManager.items[productID].Lerp());
-                if (productID == 10) Debug.Log(productID + " coroutine");
+
             }
         }
     }
-
 }
