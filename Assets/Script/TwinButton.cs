@@ -10,7 +10,7 @@ public class TwinButton : MonoBehaviour
     public TMP_Text text;
     [Space]
     public Camera ARCamera;
-    public Camera twinCamera;
+    public GameObject twin;
     public GameObject infoPanels;
 
     private void Awake()
@@ -24,13 +24,13 @@ public class TwinButton : MonoBehaviour
         if (ARCamera.gameObject.activeSelf){
             text.text = "AR";
             ARCamera.gameObject.SetActive(false);
-            twinCamera.gameObject.SetActive(true);
+            twin.SetActive(true);
             infoPanels.SetActive(false);
         }
-        else if (twinCamera.gameObject.activeSelf) {
+        else if (twin.activeSelf) {
             text.text = "T";
             ARCamera.gameObject.SetActive(true);
-            twinCamera.gameObject.SetActive(false);
+            twin.SetActive(false);
             infoPanels.SetActive(true);
         }
     }

@@ -11,7 +11,7 @@ public class TravellingProductIDManager : MonoBehaviour
     public Item[] items = new Item[13];     // Array that stores each item on the index respective to the pallet ID
 
     int highlighted;
-    Vector3 stretch = new Vector3 (0, 1f, 0);
+    Vector3 stretch = new Vector3 (0, 0.2f, 0);
     // Stores a new item
     public void AddItem(int id, Transform t, ItemPositionUpdater node)
     {
