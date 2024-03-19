@@ -40,13 +40,13 @@ public class Item : MonoBehaviour
 
         while (timeElapsed < lerpDuration)
         {
-            transform.position = Vector3.Lerp(transform.position, nextPosition, timeElapsed / lerpDuration);
+            transform.position = Vector3.Lerp(transform.position, currentNode.transform.position, timeElapsed / lerpDuration);
             timeElapsed += Time.deltaTime;
             // if(id == 10) Debug.Log("10 in while");
             yield return null;
         }
 
-        transform.position = nextPosition;
+        transform.position = currentNode.transform.position;
         // if (id == 10) Debug.Log("10 Coroutine finished");
     }
 }

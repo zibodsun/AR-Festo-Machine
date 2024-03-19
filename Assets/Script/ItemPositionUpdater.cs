@@ -19,12 +19,6 @@ public class ItemPositionUpdater : MonoBehaviour
     [Tooltip("The speed that the item will have when it travels to the next node.")] public float speedToNextPosition;
 
     int productID;          // stores the value of the last read product ID
-    Vector3 originalTransformPosition;
-
-    private void Awake()
-    {
-        originalTransformPosition = transform.position;    
-    }
 
     private void Start()
     {

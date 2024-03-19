@@ -12,6 +12,7 @@ public class TwinButton : MonoBehaviour
     public Camera ARCamera;
     public GameObject twin;
     public GameObject infoPanels;
+    public GameObject ARNodeReader;
 
     private void Awake()
     {
@@ -26,12 +27,14 @@ public class TwinButton : MonoBehaviour
             ARCamera.gameObject.SetActive(false);
             twin.SetActive(true);
             infoPanels.SetActive(false);
+            ARNodeReader.SetActive(false);
         }
         else if (twin.activeSelf) {
             text.text = "T";
             ARCamera.gameObject.SetActive(true);
             twin.SetActive(false);
             infoPanels.SetActive(true);
+            ARNodeReader.SetActive(true);
         }
     }
 }
