@@ -34,6 +34,11 @@ public class ItemPositionUpdater : MonoBehaviour
         if (nodeReader.nodeChanged) {
             nodeReader.nodeChanged = false;
 
+            // do nothing if we are reading a twin node and it is not active
+            if (nodeReader.nodeBeingMonitored == "RFID In Twin" && !productIDManager.twinActive) {
+                return;
+            }
+
             if ( Int32.TryParse(nodeReader.dataFromOPCUANode, out productID) == false)          // Check if the read value is an int
             {
                 Debug.LogError("CANNOT PARSE -" + nodeReader.dataFromOPCUANode + "- to Int32.");

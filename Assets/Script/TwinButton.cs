@@ -13,6 +13,7 @@ public class TwinButton : MonoBehaviour
     public GameObject twin;
     public GameObject infoPanels;
     public GameObject ARNodeReader;
+    public TravellingProductIDManager productIDManager;
 
     private void Awake()
     {
@@ -28,6 +29,8 @@ public class TwinButton : MonoBehaviour
             twin.SetActive(true);
             infoPanels.SetActive(false);
             ARNodeReader.SetActive(false);
+            productIDManager.twinActive = !productIDManager.twinActive;     // starts the twin node readers
+
         }
         else if (twin.activeSelf) {
             text.text = "T";
@@ -35,6 +38,7 @@ public class TwinButton : MonoBehaviour
             twin.SetActive(false);
             infoPanels.SetActive(true);
             ARNodeReader.SetActive(true);
+            productIDManager.twinActive = !productIDManager.twinActive;     // stops the twin node readers
         }
     }
 }

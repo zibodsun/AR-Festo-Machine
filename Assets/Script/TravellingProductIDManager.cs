@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 /*
  *  Stores an array of all slots for active items and allows Adding and Removing from this storage.
@@ -10,6 +11,7 @@ public class TravellingProductIDManager : MonoBehaviour
     public Item itemPrefab;                 // Prefab for the 3D item visualised.
     public Item[] items = new Item[13];     // Array that stores each item on the index respective to the pallet ID
 
+    public bool twinActive = false;
     int highlighted;
     Vector3 stretch = new Vector3 (0, 0.2f, 0);
     // Stores a new item
@@ -65,5 +67,17 @@ public class TravellingProductIDManager : MonoBehaviour
         items[highlighted].transform.localScale += stretch;
 
         Debug.Log("Enable " + highlighted);
+    }
+
+    public void Clear() {
+        for(int i = 0; i < items.Length; i++)
+        {
+            if (items[i] != null)
+            {
+                GameObject obj = items[i].gameObject;
+                Destroy(obj);
+                items[i] = null;
+            }
+        }
     }
 }
