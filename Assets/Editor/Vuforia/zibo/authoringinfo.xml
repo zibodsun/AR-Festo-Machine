@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-13.8836 -2.5852 -16.1680 11.1541 3.0052 9.9224" targetId="debcb2a4c20f4436a21c010616728129" name="zibo" pathAuthoring="debcb2a4c20f4436a21c010616728129_authoring.glb" pathOcclusion="debcb2a4c20f4436a21c010616728129_occlusion.3dt" pathNavMesh="debcb2a4c20f4436a21c010616728129_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>

@@ -1616,7 +1616,7 @@ MonoBehaviour:
   button: {fileID: 0}
   lookPosition: {fileID: 600529005}
   twinViewCamera: {fileID: 1529032953}
-  offset: {x: -1, y: 0, z: 0}
+  offset: {x: -1.1, y: 0, z: 0}
 --- !u!114 &98226199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,7 +2154,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &133538326
 MonoBehaviour:
@@ -4343,7 +4343,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &301812904
 MonoBehaviour:
@@ -7177,7 +7177,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &561515049
 MonoBehaviour:
@@ -10747,7 +10747,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &753881109
 MonoBehaviour:
@@ -13000,7 +13000,7 @@ MonoBehaviour:
   button: {fileID: 0}
   lookPosition: {fileID: 511387756}
   twinViewCamera: {fileID: 1529032953}
-  offset: {x: 1.2, y: 0, z: 0}
+  offset: {x: 1.3, y: 0, z: 0}
 --- !u!114 &949679495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14227,7 +14227,7 @@ MonoBehaviour:
   button: {fileID: 0}
   lookPosition: {fileID: 1689525474}
   twinViewCamera: {fileID: 1529032953}
-  offset: {x: -1, y: 0, z: 0}
+  offset: {x: -1.1, y: 0, z: 0}
 --- !u!114 &1005638181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14817,7 +14817,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &1047641881
 MonoBehaviour:
@@ -16092,7 +16092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af19d4b80f4fc4950b99eb9ea78ab6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 0
+  StatusFilter: 1
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -16136,7 +16136,7 @@ MonoBehaviour:
   m_Script: {fileID: 329728757, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewVisible: 0
+  PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
   mTrackableName: xrsrush-festospace_test_target
@@ -17535,6 +17535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: M1Edited
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 730e34ccdb9682444ab05c5fbf1a61b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17586,9 +17591,49 @@ PrefabInstance:
       objectReference: {fileID: 597627406}
     - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 597627406}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1680806681}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330034325802520436, guid: fe2cb80a352647a408da0322c9f786b2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5877143196373541039, guid: fe2cb80a352647a408da0322c9f786b2,
         type: 3}
       propertyPath: m_Pivot.x
@@ -21484,7 +21529,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1501538288
 GameObject:
@@ -21765,7 +21810,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &1515094654
 MonoBehaviour:
@@ -23959,6 +24004,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: M3CamEdited
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ddeddf613d290a44aabdfb703c536909,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24749,7 +24799,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &1826379483
 MonoBehaviour:
@@ -25312,7 +25362,7 @@ MonoBehaviour:
   button: {fileID: 0}
   lookPosition: {fileID: 410281838}
   twinViewCamera: {fileID: 1529032953}
-  offset: {x: 0, y: 0, z: -1}
+  offset: {x: 0, y: 0, z: -1.1}
 --- !u!114 &1873161162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27091,6 +27141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: M2Edited
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1981f9f7ca49bc64a80b649fd34ef7d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27459,7 +27514,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &2014400491
 MonoBehaviour:
@@ -27817,7 +27872,7 @@ MonoBehaviour:
   button: {fileID: 0}
   lookPosition: {fileID: 510792309}
   twinViewCamera: {fileID: 1529032953}
-  offset: {x: 1.2, y: 0, z: 0}
+  offset: {x: 1.3, y: 0, z: 0}
 --- !u!114 &2033483038
 MonoBehaviour:
   m_ObjectHideFlags: 0
